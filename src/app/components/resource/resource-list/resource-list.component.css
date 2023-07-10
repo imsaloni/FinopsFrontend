@@ -1,0 +1,60 @@
+th{
+
+  background-color: rgb(72, 198, 223);
+
+  color: whitesmoke;
+
+  }
+
+  tr-mat-header-row{
+
+  height: 35px;
+
+  }
+
+  tr{
+
+  height: 35px;
+
+  }
+
+
+
+
+  table tr:nth-child(odd){
+
+  background-color: white ;
+
+  }
+
+
+
+
+  table tr:nth-child(even){
+
+  background-color:whitesmoke ;
+
+  }
+  .header {
+
+    padding: 10px;
+
+    text-align: center;
+
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(183,231,246,1) 0%, rgba(56,143,170,1) 56%);
+
+    color: white;
+
+    font-size: 40px;
+
+  }
+
+  footer{
+
+    background-attachment: fixed;
+
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(183,231,246,1) 0%, rgba(56,143,170,1) 56%);
+
+    padding: 10px;
+
+  }

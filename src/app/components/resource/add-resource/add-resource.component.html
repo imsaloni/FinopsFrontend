@@ -1,0 +1,71 @@
+<div class="header">
+
+  <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">FinOps</h2>
+
+  </div>
+  <button [routerLink]="[ '/home']">Back To home </button>
+<div class="container my-5">
+  <h1 class="mb=3">Add New Subscription</h1>
+
+  <div class="row">
+      <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="addResource()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name"
+            name="name" [(ngModel)] = "addResourceRequest.name">
+          </div>
+            <div class="mb-3">
+              <label for="owner" class="form-label">Owner</label>
+              <input type="text" class="form-control" id="owner"
+              name="owner" [(ngModel)] = "addResourceRequest.owner">
+            </div>
+
+            <div class="mb-3">
+              <label for="owner_email_tag" class="form-label">Owner_Email_Tag</label>
+              <input type="text" class="form-control" id="owner_Email_Tag"
+              name="owner_Email_Tag" [(ngModel)] = "addResourceRequest.owner_Email_Tag">
+
+            </div>
+
+            <div class="mb-3">
+              <label for="ignore_tag" class="form-label">Ignore_Tag</label>
+              <input type="text" class="form-control" id="ignore_Tag"
+              name="ignore_Tag" [(ngModel)] = "addResourceRequest.ignore_Tag">
+
+            </div>
+
+            <div class="mb-3">
+              <label for="target_productivity" class="form-label">Target_Productivity</label>
+              <input type="text" class="form-control" id="target_Productivity"
+              name="target_Productivity" [(ngModel)] = "addResourceRequest.target_Productivity">
+
+            </div>
+
+            <div class="mb-3">
+              <label for="oee" class="form-label">Oee</label>
+              <input type="text" class="form-control" id="oee"
+              name="oee" [(ngModel)] = "addResourceRequest.oee">
+
+            </div>
+
+            <!-- <div class="mb-3">
+              <label for="action" class="form-label">Action</label>
+              <input type="text" class="form-control" id="action"
+              name="action" [(ngModel)] = "addResourceRequest.action">
+
+            </div> -->
+
+          <button type="submit" class="btn btn-success" onclick="alert('Data submitted')" type="submit">Save</button>
+          <button type="button" class="btn btn-danger"
+          (click)="deleteResource(addResourceRequest.id)">Delete</button>
+
+  </form>
+  </div>
+  </div>
+
+  <footer class="footer fixed-bottom text-center">
+    <div className="col-md-4 d-flex align-items-center">
+      <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+  </div>
+  </footer>

@@ -1,0 +1,83 @@
+<div class="header">
+
+  <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">FinOps</h2>
+
+  </div>
+  <button [routerLink]="[ '/home']">Back To home </button>
+<div class="container my-5">
+  <h1 class="mb=3">Edit Subscription</h1>
+
+  <div class="row">
+      <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="updateResource()">
+          <div class="mb-3">
+            <label for="id" class="form-label">ID</label>
+            <input type="text" class="form-control" id="id"
+            name="id" [(ngModel)] = " resourceDetails.id">
+
+          </div>
+
+          <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name"
+              name="name" [(ngModel)] = " resourceDetails.name">
+
+            </div>
+
+
+            <div class="mb-3">
+              <label for="owner" class="form-label">Owner</label>
+              <input type="text" class="form-control" id="owner"
+              name="owner" [(ngModel)] = " resourceDetails.owner">
+            </div>
+
+            <div class="mb-3">
+              <label for="owner_email_tag" class="form-label">Owner_Email_Tag</label>
+              <input type="text" class="form-control" id="owner_Email_Tag"
+              name="owner_Email_Tag" [(ngModel)] = "resourceDetails.owner_Email_Tag">
+
+            </div>
+
+            <div class="mb-3">
+              <label for="ignore_tag" class="form-label">Ignore_Tag</label>
+              <input type="text" class="form-control" id="ignore_Tag"
+              name="ignore_Tag" [(ngModel)]="resourceDetails.ignore_Tag">
+
+            </div>
+
+            <div class="mb-3">
+              <label for="target_productivity" class="form-label">Target_Productivity</label>
+              <input type="text" class="form-control" id="target_Productivity"
+              name="target_Productivity" [(ngModel)] = "resourceDetails.target_Productivity">
+
+            </div>
+
+            <div class="mb-3">
+              <label for="oee" class="form-label">Oee</label>
+              <input type="text" class="form-control" id="oee"
+              name="oee" [(ngModel)]="resourceDetails.oee">
+
+            </div>
+
+            <!-- <div class="mb-3">
+              <label for="action" class="form-label">Action</label>
+              <input type="text" class="form-control" id="action"
+              name="action" [(ngModel)] = "resourceDetails.action">
+
+            </div> -->
+
+          <button type="submit" class="btn btn-primary mr-5">Save</button>
+          <button type="button" class="btn btn-danger"
+          (click)="deleteResource(resourceDetails.id)">Delete</button>
+
+  </form>
+  </div>
+
+
+  </div>
+
+  <footer class="footer fixed-bottom text-center">
+    <div className="col-md-4 d-flex align-items-center">
+      <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+  </div>
+  </footer>

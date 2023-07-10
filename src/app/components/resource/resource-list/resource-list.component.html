@@ -1,0 +1,50 @@
+<div class="header">
+
+  <h2><img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20">FinOps</h2>
+
+  </div>
+  <button [routerLink]="[ '/home']">Back To home </button>
+<div class="container my-5">
+  <h1 class="mb-3">Subscription List</h1>
+
+  <table class="table" *ngIf="resources && resources.length > 0">
+
+      <thead>
+          <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Owner</th>
+              <th>Owner_Email_Tag</th>
+              <th>Ignore_Tag</th>
+              <th>Target_Productivity</th>
+              <th>Oee</th>
+              <th>Action</th>
+              <th></th>
+              <th></th>
+          </tr>
+         </thead>
+          <tbody>
+          <tr *ngFor="let resource of resources">
+              <td>{{ resource.id }}</td>
+              <td>{{ resource.name }}</td>
+              <td>{{ resource.owner }}</td>
+              <td>{{ resource.owner_Email_Tag }}</td>
+              <td>{{ resource.ignore_Tag }}</td>
+              <td>{{ resource.target_Productivity + "%" }}</td>
+              <td>{{ resource.oee }}</td>
+              <td><button class="btn btn-danger" [routerLink]="[ '/assessment-report']">Assessment </button></td>
+             <td> <button class="btn btn-success" [routerLink]="[ '/app-edit-resource', resource.id]">Edit </button></td>
+             <td><button class="btn btn-warning" [routerLink]="[ '/assessment-report']">Run New Assessment </button></td>
+           </tr>
+         </tbody>
+  </table>
+  <p *ngIf="!resources || resources.length <= 0">No Resources found</p>
+</div>
+
+<footer class="footer fixed-bottom text-center">
+  <div className="col-md-4 d-flex align-items-center">
+    <img src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188" width="20" height="20" className="cg-foot-logo mb-2"/>&nbsp; 2023 Capgemini. All rights reserved.
+</div>
+</footer>
+
+
